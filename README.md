@@ -49,10 +49,10 @@ Instructions for enabling Bluetooth's Classic RFCOMM port on WSL2's Ubuntu from 
 7. Install modules and headers: `$ sudo make modules_install headers_install`.
 8. Copy the new kernel into a known location: `$ cp arch/x86/boot/bzImage /mnt/c/Users/YourWinUserName/`
 9. Create a custom configuration for your wsl: `$ vim /mnt/c/Users/YourWinUserName/.wslconfig`
-
+```
     [wsl2]
-    kernel=C:\\Users\\zappc\\bzImage
-
+    kernel=C:\\Users\\YourWinUserName\\bzImage
+```
 10. Open an administrator Window's console (Powershell or cmd) and shutdown your wsl2: `> wsl --shutdown`
 
 12. Start again your WSL2 Ubuntu terminal. And monitor your system's logs at the moment you attach your Bluetooth adapter to wsl: `$ dmesg -Tw`
